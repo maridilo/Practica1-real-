@@ -1,4 +1,5 @@
 package coleccion.enums;
 
-public class ConservacionMoneda {
+public enum ConservacionMoneda {
+    G, VG, F, VF, XF, AU, UNC
 }

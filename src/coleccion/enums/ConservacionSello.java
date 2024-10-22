@@ -1,4 +1,5 @@
 package coleccion.enums;
 
-public class ConservacionSello {
+public enum ConservacionSello {
+    U, NSG, NF, N
 }
