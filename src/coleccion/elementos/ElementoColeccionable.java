@@ -1,80 +1,38 @@
 package coleccion.elementos;
 
 public abstract class ElementoColeccionable {
-    private String pais;
-    private String autoridadGobernante;
-    private int annus;
-    private double valor;
-    private String unidadMonetaria;
-    private int rareza;
-    private double precio;
+    protected String pais;
+    protected String autoridadGobernante;
+    protected int annus;
+    protected double valor;
+    protected String unidadMonetaria;
+    protected int rareza;
+    protected double precio;
 
     public ElementoColeccionable(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio) {
-        if (rareza < 1 || rareza > 10) {
-            throw new IllegalArgumentException("La rareza debe ser un número entre 1 y 10");
-        }
         this.pais = pais;
         this.autoridadGobernante = autoridadGobernante;
         this.annus = annus;
         this.valor = valor;
         this.unidadMonetaria = unidadMonetaria;
-        this.rareza = rareza;
+        setRareza(rareza);
         this.precio = precio;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-
-    public String getAutoridadGobernante() {
-        return autoridadGobernante;
-    }
-
-    public void setAutoridadGobernante(String autoridadGobernante) {
-        this.autoridadGobernante = autoridadGobernante;
-    }
-
-    public int getAnnus() {
-        return annus;
-    }
-
-    public void setAnnus(int annus) {
-        this.annus = annus;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
-    public String getUnidadMonetaria() {
-        return unidadMonetaria;
-    }
-
-    public void setUnidadMonetaria(String unidadMonetaria) {
-        this.unidadMonetaria = unidadMonetaria;
-    }
-
-    public int getRareza() {
-        return rareza;
     }
 
     public void setRareza(int rareza) {
-        this.rareza = rareza;
+    if (rareza < 1 || rareza > 100) {
+        throw new IllegalArgumentException("La rareza debe ser un número entre 1 y 100");
     }
+    this.rareza = rareza;
+    }
+
+    public double getRareza() {
+        return rareza;
+    }
+
+    public abstract String toString();
 
     public double getPrecio() {
         return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
     }
 }

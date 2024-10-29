@@ -1,25 +1,19 @@
 package coleccion;
-
 import coleccion.elementos.ElementoColeccionable;
 import coleccion.elementos.Moneda;
 import coleccion.elementos.Sello;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Coleccion {
-    private List<ElementoColeccionable> elementos;
+    private ArrayList<ElementoColeccionable> elementos;
 
     public Coleccion() {
         this.elementos = new ArrayList<>();
     }
 
-    public void añadirMoneda(Moneda moneda) {
-        elementos.add(moneda);
-    }
-
-    public void añadirSello(Sello sello) {
-        elementos.add(sello);
+    public void agregarElemento(ElementoColeccionable elemento) {
+        elementos.add(elemento);
     }
 
     public void mostrarMonedas() {
@@ -41,7 +35,7 @@ public class Coleccion {
     public double valorTotal() {
         double valor = 0;
         for (ElementoColeccionable elemento : elementos) {
-            valor += elemento.getValor();
+            valor += elemento.getPrecio();
         }
         return valor;
     }

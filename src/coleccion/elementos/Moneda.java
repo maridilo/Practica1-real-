@@ -1,5 +1,4 @@
 package coleccion.elementos;
-
 import coleccion.enums.ConservacionMoneda;
 
 public class Moneda extends ElementoColeccionable {
@@ -18,43 +17,21 @@ public class Moneda extends ElementoColeccionable {
         this.conservacionMoneda = conservacionMoneda;
     }
 
-    public String getComposicion() {
-        return composicion;
-    }
-
-    public void setComposicion(String composicion) {
-        this.composicion = composicion;
-    }
-
-    public double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
-    }
-
-    public double getDiametro() {
-        return diametro;
-    }
-
-    public void setDiametro(double diametro) {
-        this.diametro = diametro;
-    }
-
-    public double getGrosor() {
-        return grosor;
-    }
-
-    public void setGrosor(double grosor) {
-        this.grosor = grosor;
-    }
-
-    public ConservacionMoneda getConservacionMoneda() {
-        return conservacionMoneda;
-    }
-
-    public void setConservacionMoneda(ConservacionMoneda conservacionMoneda) {
-        this.conservacionMoneda = conservacionMoneda;
+    @Override
+    public String toString() {
+        return "Moneda{" +
+                "pais='" + pais + '\'' +
+                ", autoridadGobernante='" + autoridadGobernante + '\'' +
+                ", annus=" + annus +
+                ", valor=" + valor +
+                ", unidadMonetaria='" + unidadMonetaria + '\'' +
+                ", rareza=" + rareza +
+                ", precio=" + precio +
+                ", composicion='" + composicion + '\'' +
+                ", peso=" + peso +
+                ", diametro=" + diametro +
+                ", grosor=" + grosor +
+                ", conservacionMoneda=" + conservacionMoneda +
+                '}';
     }
 }

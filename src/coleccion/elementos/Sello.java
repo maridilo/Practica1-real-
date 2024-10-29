@@ -1,5 +1,4 @@
 package coleccion.elementos;
-
 import coleccion.enums.ConservacionSello;
 
 public class Sello extends ElementoColeccionable {
@@ -16,35 +15,20 @@ public class Sello extends ElementoColeccionable {
         this.conservacionSello = conservacionSello;
     }
 
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-
-    public double getAnchura() {
-        return anchura;
-    }
-
-    public void setAnchura(double anchura) {
-        this.anchura = anchura;
-    }
-
-    public double getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(double imagen) {
-        this.imagen = imagen;
-    }
-
-    public ConservacionSello getConservacionSello() {
-        return conservacionSello;
-    }
-
-    public void setConservacionSello(ConservacionSello conservacionSello) {
-        this.conservacionSello = conservacionSello;
+    @Override
+    public String toString() {
+        return "Sello{" +
+                "pais='" + pais + '\'' +
+                ", autoridadGobernante='" + autoridadGobernante + '\'' +
+                ", annus=" + annus +
+                ", valor=" + valor +
+                ", unidadMonetaria='" + unidadMonetaria + '\'' +
+                ", rareza=" + rareza +
+                ", precio=" + precio +
+                ", altura=" + altura +
+                ", anchura=" + anchura +
+                ", imagen=" + imagen +
+                ", conservacionSello=" + conservacionSello +
+                '}';
     }
 }
