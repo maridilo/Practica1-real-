@@ -1,4 +1,4 @@
-package coleccion.elementos;
+package elementos;
 
 public abstract class ElementoColeccionable {
     protected String pais;

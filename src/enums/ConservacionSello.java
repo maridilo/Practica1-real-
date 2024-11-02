@@ -1,4 +1,4 @@
-package coleccion.enums;
+package enums;
 
 // Enumeracion de los estados de conservacion del sello
 public enum ConservacionSello {

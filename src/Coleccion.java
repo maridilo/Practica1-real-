@@ -1,9 +1,6 @@
-package coleccion;
-import coleccion.elementos.ElementoColeccionable;
-import coleccion.elementos.Moneda;
-import coleccion.elementos.Sello;
+import elementos.ElementoColeccionable;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class Coleccion {
     private ArrayList<ElementoColeccionable> elementos;

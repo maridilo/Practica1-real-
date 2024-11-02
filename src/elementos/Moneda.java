@@ -1,5 +1,5 @@
-package coleccion.elementos;
-import coleccion.enums.ConservacionMoneda;
+package elementos;
+import enums.ConservacionMoneda;
 
 public class Moneda extends ElementoColeccionable {
     private String composicion;

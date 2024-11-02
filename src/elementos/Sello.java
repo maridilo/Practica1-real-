@@ -1,5 +1,5 @@
-package coleccion.elementos;
-import coleccion.enums.ConservacionSello;
+package elementos;
+import enums.ConservacionSello;
 
 public class Sello extends ElementoColeccionable {
     private double altura;

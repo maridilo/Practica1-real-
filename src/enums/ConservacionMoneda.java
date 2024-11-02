@@ -1,4 +1,4 @@
-package coleccion.enums;
+package enums;
 
 // Enumeracion de los estados de conservacion de la moneda
 public enum ConservacionMoneda {

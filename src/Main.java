@@ -1,9 +1,7 @@
-package coleccion;
-
-import coleccion.elementos.Moneda;
-import coleccion.elementos.Sello;
-import coleccion.enums.ConservacionSello;
-import coleccion.enums.ConservacionMoneda;
+import elementos.Moneda;
+import elementos.Sello;
+import enums.ConservacionSello;
+import enums.ConservacionMoneda;
 
 import java.util.Scanner;
 
