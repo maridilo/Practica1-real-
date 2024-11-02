@@ -80,75 +80,83 @@ public class Main {
 
     // Añadir una nueva moneda a la collecion
     private static void anadirMoneda(Coleccion coleccion, Scanner scanner) {
-        scanner.nextLine(); // Limpiar el buffer
-        System.out.print("País: ");
-        String pais = scanner.nextLine();
-        System.out.print("Autoridad Gobernante: ");
-        String autoridadGobernante = scanner.nextLine();
-        System.out.print("Año: ");
-        int annus = scanner.nextInt();
-        System.out.print("Valor: ");
-        double valor = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.print("Unidad Monetaria: ");
-        String unidadMonetaria = scanner.nextLine();
-        System.out.print("Rareza (1-100): ");
-        int rareza = scanner.nextInt();
-        System.out.print("Precio: ");
-        double precio = scanner.nextDouble();
-        scanner.nextLine(); // Limpiar el buffer
-        System.out.print("Composición: ");
-        String composicion = scanner.nextLine();
-        System.out.print("Peso: ");
-        double peso = scanner.nextDouble();
-        System.out.print("Diámetro: ");
-        double diametro = scanner.nextDouble();
-        System.out.print("Grosor: ");
-        double grosor = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.print("Estado de Conservación (G, VG, F, VF, XF, AU, UNC): ");
-        ConservacionMoneda estadoConservacion = ConservacionMoneda.valueOf(scanner.nextLine());
+        try {
+            scanner.nextLine(); // Limpiar el buffer
+            System.out.print("País: ");
+            String pais = scanner.nextLine();
+            System.out.print("Autoridad Gobernante: ");
+            String autoridadGobernante = scanner.nextLine();
+            System.out.print("Año: ");
+            int annus = Integer.parseInt(scanner.nextLine());
+            System.out.print("Valor: ");
+            double valor = Double.parseDouble(scanner.nextLine());
+            System.out.print("Unidad Monetaria: ");
+            String unidadMonetaria = scanner.nextLine();
+            System.out.print("Rareza (1-100): ");
+            int rareza = Integer.parseInt(scanner.nextLine());
+            System.out.print("Precio: ");
+            double precio = Double.parseDouble(scanner.nextLine());
+            System.out.print("Composición: ");
+            String composicion = scanner.nextLine();
+            System.out.print("Peso: ");
+            double peso = Double.parseDouble(scanner.nextLine());
+            System.out.print("Diámetro: ");
+            double diametro = Double.parseDouble(scanner.nextLine());
+            System.out.print("Grosor: ");
+            double grosor = Double.parseDouble(scanner.nextLine());
+            System.out.print("Estado de Conservación (G, VG, F, VF, XF, AU, UNC): ");
+            ConservacionMoneda estadoConservacion = ConservacionMoneda.fromString(scanner.nextLine());
 
-        // Crear una nueva moneda y añadirla a la colección
-        Moneda nuevaMoneda = new Moneda(pais, autoridadGobernante, annus, valor, unidadMonetaria, rareza, precio, composicion, peso, diametro, grosor, estadoConservacion);
-        coleccion.agregarElemento(nuevaMoneda);
-        System.out.println("Moneda añadida con éxito.");
+            // Crear una nueva moneda y añadirla a la colección
+            Moneda nuevaMoneda = new Moneda(pais, autoridadGobernante, annus, valor, unidadMonetaria, rareza, precio, composicion, peso, diametro, grosor, estadoConservacion);
+            coleccion.agregarElemento(nuevaMoneda);
+            System.out.println("Moneda añadida con éxito.");
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Entrada numérica inválida. Por favor, inténtelo de nuevo.");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error inesperado: " + e.getMessage());
+        }
     }
 
     // Añadir un nuevo sello a la colección
     private static void anadirSello(Coleccion coleccion, Scanner scanner) {
-        scanner.nextLine(); // Limpiar el buffer
-        System.out.print("País: ");
-        String pais = scanner.nextLine();
-        System.out.print("Autoridad Gobernante: ");
-        String autoridadGobernante = scanner.nextLine();
-        System.out.print("Año: ");
-        int annus = scanner.nextInt();
-        System.out.print("Valor: ");
-        double valor = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.print("Unidad Monetaria: ");
-        String unidadMonetaria = scanner.nextLine();
-        System.out.print("Rareza (1-100): ");
-        int rareza = scanner.nextInt();
-        System.out.print("Precio: ");
-        double precio = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.print("Composición: ");
-        String composicion = scanner.nextLine();
-        System.out.print("Ancho: ");
-        double ancho = scanner.nextDouble();
-        System.out.print("Alto: ");
-        double alto = scanner.nextDouble();
-        System.out.print("Imagen: ");
-        double imagen = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.print("Estado de Conservación (G, VG, F, VF, XF, AU, UNC): ");
-        ConservacionSello estadoConservacion = ConservacionSello.valueOf(scanner.nextLine());
+        try {
+            scanner.nextLine(); // Limpiar el buffer
+            System.out.print("País: ");
+            String pais = scanner.nextLine();
+            System.out.print("Autoridad Gobernante: ");
+            String autoridadGobernante = scanner.nextLine();
+            System.out.print("Año: ");
+            int annus = Integer.parseInt(scanner.nextLine());
+            System.out.print("Valor: ");
+            double valor = Double.parseDouble(scanner.nextLine());
+            System.out.print("Unidad Monetaria: ");
+            String unidadMonetaria = scanner.nextLine();
+            System.out.print("Rareza (1-100): ");
+            int rareza = Integer.parseInt(scanner.nextLine());
+            System.out.print("Precio: ");
+            double precio = Double.parseDouble(scanner.nextLine());
+            System.out.print("Ancho: ");
+            double ancho = Double.parseDouble(scanner.nextLine());
+            System.out.print("Alto: ");
+            double alto = Double.parseDouble(scanner.nextLine());
+            System.out.print("Imagen: ");
+            double imagen = Double.parseDouble(scanner.nextLine());
+            System.out.print("Estado de Conservación (U, NSG, NF, N): ");
+            ConservacionSello estadoConservacion = ConservacionSello.fromString(scanner.nextLine());
 
-        // Crear un nuevo sello y añadirlo a la colección
-        Sello nuevoSello = new Sello(pais, autoridadGobernante, annus, valor, unidadMonetaria, rareza, precio, ancho, alto, imagen, estadoConservacion);
-        coleccion.agregarElemento(nuevoSello);
-        System.out.println("Sello añadido con éxito.");
+            // Crear un nuevo sello y añadirlo a la colección
+            Sello nuevoSello = new Sello(pais, autoridadGobernante, annus, valor, unidadMonetaria, rareza, precio, ancho, alto, imagen, estadoConservacion);
+            coleccion.agregarElemento(nuevoSello);
+            System.out.println("Sello añadido con éxito.");
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Entrada numérica inválida. Por favor, inténtelo de nuevo.");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error inesperado: " + e.getMessage());
+        }
     }
 }

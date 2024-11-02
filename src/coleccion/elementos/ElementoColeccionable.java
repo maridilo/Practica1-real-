@@ -11,6 +11,25 @@ public abstract class ElementoColeccionable {
 
     // Constructor
     public ElementoColeccionable(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio) {
+        if (pais == null || pais.isEmpty()) {
+            throw new IllegalArgumentException("El país no puede ser nulo o vacío");
+        }
+        if (autoridadGobernante == null || autoridadGobernante.isEmpty()) {
+            throw new IllegalArgumentException("La autoridad gobernante no puede ser nula o vacía");
+        }
+        if (annus <= 0) {
+            throw new IllegalArgumentException("El año debe ser un número positivo");
+        }
+        if (valor < 0) {
+            throw new IllegalArgumentException("El valor no puede ser negativo");
+        }
+        if (unidadMonetaria == null || unidadMonetaria.isEmpty()) {
+            throw new IllegalArgumentException("La unidad monetaria no puede ser nula o vacía");
+        }
+        if (precio < 0) {
+            throw new IllegalArgumentException("El precio no puede ser negativo");
+        }
+
         this.pais = pais;
         this.autoridadGobernante = autoridadGobernante;
         this.annus = annus;

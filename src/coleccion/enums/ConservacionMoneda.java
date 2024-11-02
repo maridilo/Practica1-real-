@@ -8,7 +8,16 @@ public enum ConservacionMoneda {
     VF,  // Very Fine
     XF,  // Extra Fine
     AU,  // Almost Uncirculated
-    UNC  // Uncirculated
+    UNC;  // Uncirculated
+
+    public static ConservacionMoneda fromString(String estado) {
+        try {
+            return ConservacionMoneda.valueOf(estado.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Estado de conservación inválido: " + estado);
+        }
+    }
 }
+
 
 
