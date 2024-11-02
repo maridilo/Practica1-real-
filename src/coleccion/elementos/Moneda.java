@@ -8,6 +8,7 @@ public class Moneda extends ElementoColeccionable {
     private double grosor;
     private ConservacionMoneda conservacionMoneda;
 
+    // Constructor
     public Moneda(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio, String composicion, double peso, double diametro, double grosor, ConservacionMoneda conservacionMoneda) {
         super(pais, autoridadGobernante, annus, valor, unidadMonetaria, rareza, precio);
         this.composicion = composicion;

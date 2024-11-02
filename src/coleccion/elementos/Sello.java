@@ -7,6 +7,7 @@ public class Sello extends ElementoColeccionable {
     private double imagen;
     private ConservacionSello conservacionSello;
 
+    // Constructor
     public Sello(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio, double altura, double anchura, double imagen, ConservacionSello conservacionSello) {
         super(pais, autoridadGobernante, annus, valor, unidadMonetaria, rareza, precio);
         this.altura = altura;
